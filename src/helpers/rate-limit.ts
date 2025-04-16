@@ -1,4 +1,4 @@
-import { Response, Request } from "express-serve-static-core";
+import { Response, Request } from "express";
 import rateLimit from "express-rate-limit";
 
 import { ipWhitelist } from "@src/constants";

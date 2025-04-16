@@ -1,4 +1,4 @@
-import * as express from "express-serve-static-core";
+import * as Express from "express";
 
 declare global {
   namespace Express {
@@ -7,4 +7,5 @@ declare global {
     }
   }
 }
-export default { express };
+
+export default Express;

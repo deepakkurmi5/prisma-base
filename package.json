@@ -10,7 +10,13 @@
     "lint": "eslint --ext .ts src/",
     "lint/fix": "eslint --fix",
     "prettier/check": "prettier src --check",
-    "prettier/fix": "prettier --write src/"
+    "prettier/fix": "prettier --write src/",
+    "prisma-migrate": "npx prisma migrate dev --name init",
+    "prisma-deploy": "npx prisma migrate deploy",
+    "prisma-studio": "npx prisma studio"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +29,8 @@
     "node": ">=20.11.0"
   },
   "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "@prisma/extension-read-replicas": "^0.4.1",
     "compression": "^1.8.0",
     "cors": "^2.8.5",
     "debug": "^4.4.0",
@@ -48,12 +56,14 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.14",
     "@types/request-ip": "^0.0.41",
+    "@types/serve-favicon": "^2.5.7",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.5",
     "globals": "^16.0.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.3",
+    "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.2",

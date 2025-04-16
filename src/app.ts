@@ -1,5 +1,5 @@
-import { Response, Request } from "express-serve-static-core";
 import express, { Express } from "express";
+import type { Response, Request } from "express";
 import path from "path";
 import morgan from "morgan";
 import helmet from "helmet";
@@ -37,7 +37,7 @@ export function createApp() {
   }
 
   app.get("/", (req: Request, response: Response) => {
-    response.status(HttpStatusCodes.OK).send("Server is runing...");
+    response.status(HttpStatusCodes.OK).json({ message: `Server is runing in ${process.pid}` });
   });
 
   // initialize routers
