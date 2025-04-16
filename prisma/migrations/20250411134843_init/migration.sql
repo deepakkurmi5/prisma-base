@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "Profile" ALTER COLUMN "bio" SET DATA TYPE CHAR(10);

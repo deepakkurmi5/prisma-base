@@ -31,7 +31,7 @@ model Post {
 
 model Category {
   id    Int    @id @default(autoincrement())
-  name  String
+  name  String @unique
   posts Post[]
 }
 
@@ -39,20 +39,3 @@ enum Roles {
   ADMIN
   USER
 }
-
-// =================================================
-// m-n relation for user and videos
-// model User {
-//   id                       Int     @id @default(autoincrement())
-//   Video_UserDislikedVideos Video[] @relation("UserDislikedVideos")
-//   Video_UserLikedVideos    Video[] @relation("UserLikedVideos")
-// }
-
-// model Video {
-//   id                      Int    @id @default(autoincrement())
-//   User_UserDislikedVideos User[] @relation("UserDislikedVideos")
-//   User_UserLikedVideos    User[] @relation("UserLikedVideos")
-// }
-
-// =================================================
-// Referential actions

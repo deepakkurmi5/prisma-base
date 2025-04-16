@@ -15,9 +15,6 @@
     "prisma-deploy": "npx prisma migrate deploy",
     "prisma-studio": "npx prisma studio"
   },
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,6 +24,9 @@
   },
   "engines": {
     "node": ">=20.11.0"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0",

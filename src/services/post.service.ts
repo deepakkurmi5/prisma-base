@@ -29,4 +29,21 @@ export default class PostService {
     });
     return publishedPost;
   }
+
+  static async createPost() {
+    const create = await prisma.post.create({
+      data: {
+        title: "Prisma is greate for status",
+        authorId: 1,
+        categories: {
+          connect: [
+            {
+              id: 2,
+            },
+          ],
+        },
+      },
+    });
+    return create;
+  }
 }

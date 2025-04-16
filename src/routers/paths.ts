@@ -15,6 +15,7 @@ const Paths = {
   Post: {
     base: "/posts",
     Get: ["/"],
+    Post: ["/create"],
   },
   User: {
     Base: "/users",
